@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Data</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/imgs/transparent_meditech_logo.png" alt="Meditech Logo">      </a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn-custom" href="/frontend/patient.html">Patient Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-custom" href="/frontend/appointment.html">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-custom" href="/frontend/medicalrecords.html">Medical Records</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3>Patient Data</h3>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="row mb-3">
+            <label for="patientID" class="col-sm-2 col-form-label">Patient ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="patientID" value="123456" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="patientName" value="John Doe" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="patientEmail" value="john.doe@example.com" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientDOB" class="col-sm-2 col-form-label">Date of Birth</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="patientDOB" value="1985-01-01" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientPhone" class="col-sm-2 col-form-label">Phone Number</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" id="patientPhone" value="123-456-7890" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientEmergencyContact" class="col-sm-2 col-form-label">Emergency Contact</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" id="patientEmergencyContact" value="987-654-3210" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientAddress" class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="patientAddress" value="123 Main St, City, Country" readonly>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label for="patientCondition" class="col-sm-2 col-form-label">Medical Condition</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="patientCondition" value="Hypertension" readonly>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

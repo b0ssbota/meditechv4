@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Records</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .record-container {
+      background-color: #f8f8f8;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .search-bar {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/imgs/transparent_meditech_logo.png" alt="Meditech Logo">      </a>
+      <div class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn-custom" href="/frontend/patient.html">Patient Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-custom" href="/frontend/appointment.html">Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn-custom" href="/frontend/medicalrecords.html">Medical Records</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="search-bar">
+      <input type="text" class="form-control" id="searchInput" placeholder="Search by Patient ID" onkeyup="searchRecords()">
+    </div>
+    <div id="recordContainer">
+      <!-- Mock data for medical records -->
+      <div class="record-container" data-id="123456">
+        <h5>Patient ID: 123456</h5>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> john.doe@example.com</p>
+        <p><strong>Phone Number:</strong> 123-456-7890</p>
+        <p><strong>Emergency Contact:</strong> 987-654-3210</p>
+        <p><strong>Date of Birth:</strong> 1985-01-01</p>
+        <p><strong>Address:</strong> 123 Main St, City, Country</p>
+        <p><strong>Medical Condition:</strong> Hypertension</p>
+        <p><strong>Allegiance:</strong> Blue Cross Blue Shield</p>
+        <p><strong>Last Hospital Visit:</strong> 2023-12-01</p>
+        <p><strong>Reason for Visit:</strong> Routine Checkup</p>
+      </div>
+      <div class="record-container" data-id="123457">
+        <h5>Patient ID: 123457</h5>
+        <p><strong>Name:</strong> Jane Smith</p>
+        <p><strong>Email:</strong> jane.smith@example.com</p>
+        <p><strong>Phone Number:</strong> 234-567-8901</p>
+        <p><strong>Emergency Contact:</strong> 876-543-2109</p>
+        <p><strong>Date of Birth:</strong> 1990-02-02</p>
+        <p><strong>Address:</strong> 456 Oak St, City, Country</p>
+        <p><strong>Medical Condition:</strong> Asthma</p>
+        <p><strong>Allegiance:</strong> UnitedHealthcare</p>
+        <p><strong>Last Hospital Visit:</strong> 2023-11-15</p>
+        <p><strong>Reason for Visit:</strong> Asthma Checkup</p>
+      </div>
+      <!-- Additional mock records can be added here -->
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    function searchRecords() {
+      var input, filter, recordContainer, records, i, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      recordContainer = document.getElementById('recordContainer');
+      records = recordContainer.getElementsByClassName('record-container');
+
+      for (i = 0; i < records.length; i++) {
+        txtValue = records[i].getAttribute('data-id');
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          records[i].style.display = "";
+        } else {
+          records[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+body {
+    background-color: #e0e0e0; /* Light grey background */
+}
+
+.navbar {
+    background-color: #e0e0e0; /* Same color as the background */
+    border-bottom: none; /* Remove the border */
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 100px; /* 2x original size */
+    height: 100px; /* 2x original size */
+    background: none; /* Removes blue background */
+}
+
+.nav-link {
+    background-color: #70d0ff;
+    border-radius: 10px;
+    padding: 20px 40px; /* 2x original size */
+    margin: 10px; /* 2x original size */
+    text-align: center;
+    color: black !important;
+    font-size: 1.5rem; /* Increased font size */
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* 2x original size */
+}
+
+.btn-custom {
+    background-color: #70d0ff;
+    color: black;
+    border-radius: 15px;
+    padding: 20px 40px; /* 2x original size */
+    margin-right: 20px; /* 2x original size */
+    font-size: 1.5rem; /* Increased font size */
+}
+
+.btn-custom:hover {
+    background-color: #58c0ff;
+}
+
+.form-container {
+    background-color: #f8f8f8;
+    padding: 40px; /* 2x original size */
+    border-radius: 20px; /* 2x original size */
+    max-width: 800px; /* 2x original size */
+    margin: auto;
+    margin-top: 100px; /* 2x original size */
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px; /* 2x original size */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* 2x original size */
+}
+
+h3 {
+    font-size: 3rem; /* 2x original size */
+}
+
+.form-control {
+    padding: 20px; /* 2x original size */
+    font-size: 2rem; /* 2x original size */
+}
+
+.btn-submit, .btn-danger {
+    background-color: #ff5c5c;
+    border: none;
+    padding: 20px; /* 2x original size */
+    font-size: 2rem; /* 2x original size */
+    border-radius: 30px; /* 2x original size */
+    color: white;
+    width: 100%;
+}
+
+.btn-submit:hover, .btn-danger:hover {
+    background-color: #ff4c4c;
+}
+
+.modal-dialog {
+    max-width: 50%; /* Set modal size to half */
+}
+
+@media (max-width: 576px) {
+    .navbar-brand, .nav-link {
+        padding: 10px 20px; /* 2x original size */
+        font-size: 1.6rem; /* 2x original size */
+        margin: 4px; /* 2x original size */
+    }
+
+    .card {
+        margin: 40px; /* 2x original size */
+        padding: 30px; /* 2x original size */
+    }
+
+    .form-control {
+        padding: 16px; /* 2x original size */
+    }
+
+    .btn-submit, .btn-danger {
+        padding: 16px; /* 2x original size */
+        font-size: 1.8rem; /* 2x original size */
+    }
+
+    .modal-dialog {
+        max-width: 80%; /* Set modal size to a smaller value for mobile */
+    }
+}
